@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { CartContext } from '../context/CartContext'
 
+import Breadcrumb from './Breadcrumbs'
+
 import logo from '../../assets/images/logo.png'
 
 export default function Header() {
@@ -18,9 +20,12 @@ export default function Header() {
         <Link className="navbar-item" to="/phones">
           <img src={logo} alt="moobile is the best smartphone marketplace" />
         </Link>
-        <Link className="navbar-item has-text-weight-bold" to="/phones">
+        <Link className="navbar-item has-text-weight-bold is-size-4" to="/phones">
           moobile
         </Link>
+        <div className="navbar-item">
+          <Breadcrumb />
+        </div>
       </div>
 
       <div className="navbar-menu">
