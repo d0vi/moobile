@@ -9,6 +9,7 @@ import Footer from './core/components/Footer'
 import Content from './core/components/Content'
 
 import List from './pages/list/List'
+import Detail from './pages/detail/Detail'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,9 @@ function App() {
           <Redirect from="/" to="/phones" exact />
           <Route exact path="/phones">
             <List />
+          </Route>
+          <Route path="/phones/:id">
+            <Detail />
           </Route>
         </Switch>
       </Content>
