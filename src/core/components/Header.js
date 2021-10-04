@@ -15,16 +15,26 @@ export default function Header() {
   const { count } = useContext(CartContext)
 
   return (
-    <nav className="navbar is-transparent is-primary" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-transparent is-primary is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link className="navbar-item" to="/phones">
           <img src={logo} alt="moobile is the best smartphone marketplace" />
         </Link>
-        <Link className="navbar-item has-text-weight-bold is-size-4" to="/phones">
+        <Link className="navbar-item has-text-weight-bold" to="/phones">
           moobile
         </Link>
-        <div className="navbar-item">
+        <div className="navbar-item is-hidden-touch">
           <Breadcrumb />
+        </div>
+        <div className="navbar-item is-hidden-desktop">
+          <div className="field is-grouped has-text-white">
+            <p className="control">
+              <span className="icon">
+                <FontAwesomeIcon icon={faShoppingCart} />
+              </span>
+            </p>
+            <p>{count}</p>
+          </div>
         </div>
       </div>
 

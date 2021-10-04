@@ -25,3 +25,7 @@ body {
 .footer {
   padding: 1rem;
 }
+
+.breadcrumb li + li::before {
+  color: white;
+}

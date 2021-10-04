@@ -35,11 +35,11 @@ export default function List() {
       </div>
       <div className="columns is-multiline">
         {phones
-          .filter(i => `${i.brand} ${i.model}`.toLowerCase().includes(searchTerm.toLowerCase()))
-          .map(i => (
-            <div key={i.id} className="column is-one-third-tablet is-one-quarter-desktop">
-              <Link to={`/phones/${i.id}`}>
-                <Preview {...i} />
+          .filter(p => `${p.brand} ${p.model}`.toLowerCase().includes(searchTerm.toLowerCase()))
+          .map(p => (
+            <div key={p.id} className="column is-one-third-tablet is-one-quarter-desktop">
+              <Link to={`/phones/${p.id}`}>
+                <Preview {...p} />
               </Link>
             </div>
           ))}
